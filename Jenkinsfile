@@ -14,6 +14,7 @@ pipeline {
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
 		        sh 'ls -la'
+			 sh 'ls ls /usr/local/bin/'
 			sh 'pwd'
 			sh 'whoami'
 			sh 'export PATH=$PATH:/usr/local/bin/' 	
