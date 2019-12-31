@@ -1,0 +1,10 @@
+version: '3'
+services:
+  weather-app1:
+    build:
+      context: .
+    ports:
+      - "8091:3000"
+    env_file:
+      - test.env    
+
