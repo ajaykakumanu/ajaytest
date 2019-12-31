@@ -15,7 +15,7 @@ pipeline {
                 script {
 		        sh 'ls -la'
 			sh 'export PATH=$PATH:/usr/local/bin/' 	
-		        sh 'docker-compose build'
+		        sh 'docker image build'
 			sh 'echo $PATH' 
                 }
             }
