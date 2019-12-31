@@ -15,6 +15,7 @@ pipeline {
 		       sh 'ls -la'
                        sh 'git clone https://github.com/ajaykakumanu/ajaytest.git'
 		       sh 'ls -la'
+		       sh 'export PATH=$PATH:/usr/local/bin' 	
 		       sh 'docker-compose build'
                 }
             }
