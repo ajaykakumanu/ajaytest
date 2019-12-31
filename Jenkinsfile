@@ -15,7 +15,7 @@ pipeline {
                 script {
 		        sh 'ls -la'
 			sh 'export PATH=$PATH:/usr/local/bin/' 	
-		        sh 'docker image build'
+		step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true])
 			sh 'echo $PATH' 
                 }
             }
