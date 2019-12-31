@@ -13,13 +13,9 @@ pipeline {
 		echo 'Image starts'
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
-		       sh ' rm -rf *.*'
-			sh 'ls -la'
-			                      
-			
-		       sh 'ls -la'
-		       sh 'export PATH=$PATH:/usr/local/bin' 	
-		       sh 'docker-compose build'
+		        sh 'ls -la'
+			sh 'export PATH=$PATH:/usr/local/bin' 	
+		        sh 'docker-compose build'
                 }
             }
         }
