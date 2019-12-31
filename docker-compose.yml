@@ -1,6 +1,6 @@
 version: '3'
 services:
-  weather-app1:
+  weather-app75:
     build:
       context: .
     ports:
