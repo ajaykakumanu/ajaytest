@@ -14,7 +14,7 @@ pipeline {
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
 		        sh 'ls -la'
-			sh 'export PATH=$PATH:/usr/local/bin' 	
+			sh 'export PATH=$PATH:/usr/local/bin/' 	
 		        sh 'docker-compose build'
                 }
             }
