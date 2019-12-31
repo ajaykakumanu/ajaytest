@@ -11,11 +11,11 @@ pipeline {
            
             steps {
 		echo 'Image starts'
+		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
 		       sh ' rm -rf *.*'
 			sh 'ls -la'
-			
-                       sh 'git pull'
+			                      
 			
 		       sh 'ls -la'
 		       sh 'export PATH=$PATH:/usr/local/bin' 	
