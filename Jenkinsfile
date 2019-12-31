@@ -15,6 +15,7 @@ pipeline {
                 script {
 		        sh 'ls -la'
 			sh 'pwd'
+			sh 'whoami'
 			sh 'export PATH=$PATH:/usr/local/bin/' 	
 			sh 'docker-compose up --build'
 		step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true])
