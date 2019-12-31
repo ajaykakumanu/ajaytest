@@ -17,9 +17,8 @@ pipeline {
 			 sh 'ls ls /usr/local/bin/'
 			sh 'pwd'
 			sh 'whoami'
-			sh 'export PATH=$PATH:/usr/local/bin/' 	
+			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'docker-compose up --build'
-		step([$class: 'DockerComposeBuilder', dockerComposeFile: 'docker-compose.yml', option: [$class: 'StartAllServices'], useCustomDockerComposeFile: true])
 			sh 'echo $PATH' 
                 }
             }
