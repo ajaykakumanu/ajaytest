@@ -1,3 +1,4 @@
+def foo = "foo"
 pipeline {
     agent any
     stages {
@@ -19,10 +20,10 @@ pipeline {
 			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'echo $PATH' 
 			sh '''
-			cat > outfile1.txt <<EOF 
-some text
-to save
-EOF
+			cat > outfile.txt <<EOF
+				some text
+				to $foo
+				EOF
                          '''
 		}
             }
