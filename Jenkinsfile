@@ -17,9 +17,10 @@ pipeline {
 			sh 'pwd'
 			sh 'whoami'
 			sh 'export PATH=$PATH:/opt/compose/' 	
-			sh 'docker-compose up --build'
 			sh 'echo $PATH' 
-                }
+			sh 'cat a1.env'
+			sh 'TAG=v1.5'
+		}
             }
         }
        
