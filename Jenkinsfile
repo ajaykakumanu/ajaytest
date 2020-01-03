@@ -17,6 +17,9 @@ pipeline {
 		echo 'Image starts'
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
+			
+			sh 'echo ${foo}'
+			
 			sh 'echo ${CC}'
 		        sh 'ls /opt/compose/'
 			sh 'pwd'
@@ -25,11 +28,11 @@ pipeline {
 			sh 'echo $PATH'
 			sh 'echo ${CC}'
 			sh '''
-			cat > outfile.txt <<EOF
-				some 
-				to ${CC}
-				EOF
-                         '''
+			sh 'echo ${foo}'
+			cat > test.env <<EOF
+ NODE_ENV=jenkis\
+ EOF
+                     '''
 		}
             }
         }
