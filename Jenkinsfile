@@ -14,6 +14,7 @@ pipeline {
 		echo 'Image starts'
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
+			foo = "bbbbbbbb"
 			sh 'echo ${foo}'
 		        sh 'ls /opt/compose/'
 			sh 'pwd'
