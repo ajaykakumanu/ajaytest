@@ -14,11 +14,9 @@ pipeline {
          stage('Build Docker Image') {
            
             steps {
-		    	foo = "ccccc"
 		echo 'Image starts'
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
-			foo = "bbbbbbbb"
 			sh 'echo ${CC}'
 		        sh 'ls /opt/compose/'
 			sh 'pwd'
