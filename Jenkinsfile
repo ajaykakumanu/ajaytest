@@ -32,6 +32,9 @@ cat > test.env <<EOF
 NODE_ENV=jenkis
 PORT=1234
                    '''
+			
+	sh 'docker-compose up --build'
+			
 		}
             }
         }
