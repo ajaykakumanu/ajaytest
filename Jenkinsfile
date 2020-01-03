@@ -22,7 +22,7 @@ pipeline {
 			cat > outfile1.txt <<EOF 
 some text
 to save
->EOF
+EOF
                          '''
 		}
             }
