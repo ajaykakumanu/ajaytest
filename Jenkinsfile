@@ -18,8 +18,10 @@ pipeline {
 			sh 'whoami'
 			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'echo $PATH' 
-			sh 'cat a1.env'
-			sh 'TAG=v1.5'
+			sh '''
+                         echo "Multiline shell steps works too"
+                              ls -lah
+                         '''
 		}
             }
         }
