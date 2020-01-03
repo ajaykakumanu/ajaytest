@@ -19,8 +19,10 @@ pipeline {
 			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'echo $PATH' 
 			sh '''
-                         echo "Multiline shell steps works too"
-                              ls -lah
+			cat > outfile.txt <<EOF
+				some text
+				to save
+				EOF
                          '''
 		}
             }
