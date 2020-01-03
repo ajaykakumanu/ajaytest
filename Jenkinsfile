@@ -19,11 +19,10 @@ pipeline {
 			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'echo $PATH' 
 			sh '''
-			cat > outfile1.txt <<EOF
-				>some text
-				>to save
-				>EOF
-			
+			cat > outfile1.txt <<EOF 
+some text
+to save
+>EOF
                          '''
 		}
             }
