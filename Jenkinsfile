@@ -19,11 +19,11 @@ pipeline {
 			sh 'whoami'
 			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'echo $PATH'
-			sh 'echo $foo'
+			sh 'echo ${foo}'
 			sh '''
 			cat > outfile.txt <<EOF
 				some 
-				to $foo
+				to ${foo}
 				EOF
                          '''
 		}
