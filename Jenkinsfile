@@ -28,7 +28,6 @@ pipeline {
 			sh 'echo $PATH'
 			sh 'echo ${CC}'
 			sh '''
-			sh 'echo ${foo}'
 			cat > test.env <<EOF
  NODE_ENV=jenkis\
  EOF
