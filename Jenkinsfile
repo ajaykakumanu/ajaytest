@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-		echo "$env.jsonstring"
 		script{	    
 	        jsonObj = readJSON text: ${env.jsonstring}
 		echo "Service_PORT=${Service_PORT}"
