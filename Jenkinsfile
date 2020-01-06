@@ -13,13 +13,12 @@ pipeline {
 		echo "The impact is ${varx}"
                 varx = 'bbbbbbbbbbb'
 		echo "The impact is ${varx}"
-	         echo "The impact is ${env.jsonstring}"	     
-		     
+	        echo "The impact is ${env.jsonstring}"	     
 		jsonObj = "${env.jsonstring}"
-		echo ${jsonObj}     
-		echo ${jsonObj.name}
-                echo ${jsonObj.age}
-		echo "The impact is ${env.jsonstring}"
+		echo "${jsonObj}"
+		
+		     
+		 echo "The impact is ${env.jsonstring}"
 		sh 'echo ${CC}'	    
 		echo 'Running build automation'
 	     }
