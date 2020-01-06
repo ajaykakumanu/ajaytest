@@ -15,7 +15,7 @@ pipeline {
 		echo "The impact is ${varx}"
 	         echo "The impact is ${env.jsonstring}"	     
 		     
-		jsonObj='${env.jsonstring}'
+		jsonObj="${env.jsonstring}"
 		echo ${jsonObj}     
 		echo ${jsonObj.name}
                 echo ${jsonObj.age}
