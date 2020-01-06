@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-		    def j="10"
+		def j='10'
 		echo "$env.jsonstring"
 	        def jsonResponse = readJSON text: "${response.content}"
 		def jsonObj = readJSON text: ${env.jsonstring}
