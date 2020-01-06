@@ -10,7 +10,7 @@ pipeline {
 		
             steps {
 		echo "$env.jsonstring"
-		def jsonObj = readJSON text: jsonString 
+		    def jsonObj = readJSON text: ${env.jsonstring}
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
 		sh "echo ${jsonObj.name}" 
