@@ -1,4 +1,5 @@
 def foo = 'aaaaaaa'
+def jsonObj
 pipeline {
     agent any
 	environment { 
@@ -7,10 +8,8 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-		def j='10'
 		echo "$env.jsonstring"
-	        def jsonResponse = readJSON text: "${response.content}"
-		def jsonObj = readJSON text: ${env.jsonstring}
+	        jsonObj = readJSON text: ${env.jsonstring}
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
 		sh "echo ${jsonObj.name}" 
