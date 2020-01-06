@@ -6,12 +6,21 @@ pipeline {
     }
     stages {
         stage('Build') {
+	
+	 def jsonString = '{"name":"katone","age":5}'
+         def jsonObj = readJSON text: jsonString
+       
+         sh "echo ${jsonObj.name}"           sh "echo ${jsonObj.age}"   
+			
+		
             steps {
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
 	        echo 'Running build automation'            }
         }
          stage('Build Docker Image') {
+		 
+		 
            
             steps {
 		echo 'Image starts'
@@ -36,10 +45,9 @@ EOF
                       sh '''
 				export PATH=$PATH:/opt/compose/
 				echo $PATH
-				docker-compose up --build
+				
 		       '''
-	
-			
+	 
 		}
             }
         }
