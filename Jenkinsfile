@@ -31,9 +31,14 @@ pipeline {
 		     
 		     echo "${MOCA_NAME}"
 		     echo "${MCS_NAME}"
+		     sh """
+echo ${MOCA_NAME}
+echo ${MCS_NAME}
+
+"""
 		     
-		     sh "echo ${MOCA_NAME}"
-			sh "echo ${MCS_NAME}"
+		     
+		  
 	     }
 		    
 		    echo "${varx}" 
