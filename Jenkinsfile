@@ -74,6 +74,8 @@ EOF
 				export PATH=$PATH:/opt/compose/
 				echo $PATH
 				
+			docker-compose up	
+				
 		       '''
 	 
 		}
