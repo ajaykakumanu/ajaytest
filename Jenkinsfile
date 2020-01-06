@@ -1,7 +1,7 @@
  def varx='aaaaaa' 
  
 def jsonObj='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-def jsonObj1='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+def jsonObj1
 pipeline {
     agent any
 	environment { 
@@ -18,7 +18,7 @@ pipeline {
 		jsonObj = "${env.jsonstring}"
 		echo "${jsonObj}"
 		jsonObj1 = readJSON text: jsonObj
-		echo "${jsonObj1.name}" 
+	        echo "${jsonObj1.name}" 
                 echo "${jsonObj1.age}" 
 		sh 'echo ${CC}'	    
 		echo 'Running build automation'
