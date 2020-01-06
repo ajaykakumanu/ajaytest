@@ -1,8 +1,12 @@
  def varx='aaaaaa' 
 
-def jsonObj='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+def MOCA_NAME
+def MCS_NAME
+def SAL_NAME
+def REPORT_NAME
+def jsonObj
 def jsonObj1
-def jsonObj2
+
 pipeline {
     agent any
 	environment { 
@@ -12,16 +16,13 @@ pipeline {
         stage('Build') {
 	    steps {
 	     script {
-		echo "The impact is ${varx}"
-                varx = 'bbbbbbbbbbb'
-		echo "The impact is ${varx}"
 	        echo "The impact is ${env.jsonstring}"	     
 		jsonObj = "${env.jsonstring}"
-		echo "${jsonObj}"
 		jsonObj1 = readJSON text: jsonObj
-	        echo "${jsonObj1.voice.productName}" 
-                echo "${jsonObj1.voice.moduleName}" 
-		sh 'echo ${CC}'	    
+	        echo "${jsonObj1.moca.productName}" 
+                echo "${jsonObj1.mcs.productName}"
+		echo "${jsonObj1.sal.productName}"
+		echo "${jsonObj1.reporting.productName}"
 		echo 'Running build automation'
 	     }
 		    
