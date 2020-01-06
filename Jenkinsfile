@@ -1,6 +1,6 @@
  def varx='aaaaaa' 
  
-def jsonObj
+def jsonObj='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 pipeline {
     agent any
 	environment { 
