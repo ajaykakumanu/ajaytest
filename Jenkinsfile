@@ -11,7 +11,7 @@ pipeline {
 	    steps {
 	     script {
 		echo "The impact is ${varx}"
-                varx='bbbb'
+                varx='bbbbbbbbbbb'
 		echo "The impact is ${varx}"
 		sh 'echo ${CC}'	    
 		echo 'Running build automation'
