@@ -1,5 +1,5 @@
-def foo 
-def ajay = "ajay"
+ foo='aaa' 
+ ajay ='ajay'
 
 
 def jsonObj
