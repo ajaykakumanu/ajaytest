@@ -6,9 +6,10 @@ pipeline {
     }
     stages {
         stage('Build') {
-	echo "$env.jsonstring"
+	
 		
             steps {
+		    echo "$env.jsonstring"
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
 	        echo 'Running build automation'            }
