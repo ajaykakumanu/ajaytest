@@ -6,11 +6,11 @@ pipeline {
     }
     stages {
         stage('Build') {
-	
-		
-            steps {
+	    steps {
+		    def j="10"
 		echo "$env.jsonstring"
-		    def jsonObj = readJSON text: ${env.jsonstring}
+	        def jsonResponse = readJSON text: "${response.content}"
+		def jsonObj = readJSON text: ${env.jsonstring}
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
 		sh "echo ${jsonObj.name}" 
