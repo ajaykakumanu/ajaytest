@@ -12,6 +12,8 @@ pipeline {
         stage('Build') {
 	    steps {
 	     script {
+                foo="bbbbbbbbbbbbb"	
+		echo "The impact is ${foo}"
 	        echo "The impact is ${ajay}"
 		sh 'echo ${CC}'	    
 		echo 'Running build automation'
