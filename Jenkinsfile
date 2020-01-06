@@ -1,4 +1,7 @@
 def foo = 'aaaaaaa'
+def ajay = "ajay"
+
+
 def jsonObj
 pipeline {
     agent any
@@ -8,6 +11,7 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
+	     echo "The impact is ${ajay}"
 		sh 'echo ${CC}'	    
 	        echo 'Running build automation'            }
         }
