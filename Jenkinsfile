@@ -9,9 +9,13 @@ pipeline {
 	
 		
             steps {
-		    echo "$env.jsonstring"
+		echo "$env.jsonstring"
+		def jsonObj = readJSON text: jsonString 
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
+		sh "echo ${jsonObj.name}" 
+                sh "echo ${jsonObj.age}"  
+		    
 	        echo 'Running build automation'            }
         }
          stage('Build Docker Image') {
