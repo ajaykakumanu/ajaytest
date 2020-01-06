@@ -28,9 +28,10 @@ pipeline {
 			sh 'echo $PATH'
 			sh 'echo ${CC}'
 			sh '''
-cat > test.env <<EOF
+cat > test1.env <<EOF
 NODE_ENV=jenkis
 PORT=1234
+EOF
                    '''
                       sh '''
 				export PATH=$PATH:/opt/compose/
