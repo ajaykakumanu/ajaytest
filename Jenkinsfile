@@ -11,9 +11,13 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-	     echo "The impact is ${ajay}"
+	     script {
+	        echo "The impact is ${ajay}"
 		sh 'echo ${CC}'	    
-	        echo 'Running build automation'            }
+		echo 'Running build automation'
+	     }
+	    
+	    }
         }
          stage('Build Docker Image') {
 		 
