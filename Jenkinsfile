@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
 	    steps {
 	     script {
-		echo "The impact is ${aaaaaa}"
+		echo "The impact is ${varx}"
                 varx='bbbb'
 		echo "The impact is ${varx}"
 		sh 'echo ${CC}'	    
