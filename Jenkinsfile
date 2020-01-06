@@ -9,7 +9,9 @@ pipeline {
         stage('Build') {
 	    steps {
 		script{	    
-	        jsonObj = readJSON text: ${env.jsonstring}
+		foo=${env.jsonstring}
+	 	         sh "echo ${foo}" 	
+	        jsonObj = readJSON text: ${foo}
 		echo "Service_PORT=${Service_PORT}"
 		echo "Docker_PORT=${Docker_PORT}" 
 		sh "echo ${jsonObj.name}" 
