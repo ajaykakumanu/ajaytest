@@ -1,7 +1,5 @@
- foo='aaa' 
+ foo='aaassssssssssssssssssssssssssss' 
  ajay ='ajay'
-
-
 def jsonObj
 pipeline {
     agent any
@@ -12,9 +10,9 @@ pipeline {
         stage('Build') {
 	    steps {
 	     script {
-                foo='bbbbbbbbbbbbb'
 		echo "The impact is ${foo}"
-	        echo "The impact is ${ajay}"
+                foo='bbbbbbbbbbbbb'
+		echo "The impact is ${ajay}"
 		sh 'echo ${CC}'	    
 		echo 'Running build automation'
 	     }
