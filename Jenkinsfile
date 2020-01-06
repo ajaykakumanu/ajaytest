@@ -43,9 +43,8 @@ pipeline {
 		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
                 script {
 			
-			sh 'echo ${foo}'
-			
-			sh 'echo ${CC}'
+			sh 'echo ${MOCA_NAME}'
+			sh 'echo ${MCS_NAME}'
 		        sh 'ls /opt/compose/'
 			sh 'pwd'
 			sh 'whoami'
