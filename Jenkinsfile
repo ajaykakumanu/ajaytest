@@ -62,12 +62,14 @@ echo ${MCS_NAME}
 			sh 'export PATH=$PATH:/opt/compose/' 	
 			sh 'echo $PATH'
 			sh 'echo ${CC}'
-			sh '''
+			sh """
 cat > test.env <<EOF
-NODE_ENV=${CC}
-PORT=1234
+MOCA_NAME=${MOCA_NAME}
+MCS_NAME=${MCS_NAME}
+SAL_NAME=${SAL_NAME}
+REPORT_NAME=${REPORT_NAME}
 EOF
-                   '''
+                   """
                       sh '''
 				export PATH=$PATH:/opt/compose/
 				echo $PATH
