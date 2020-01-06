@@ -8,15 +8,7 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-		script{	    
-		foo=${env.jsonstring}
-	 	         sh "echo ${foo}" 	
-	        jsonObj = readJSON text: ${foo}
-		echo "Service_PORT=${Service_PORT}"
-		echo "Docker_PORT=${Docker_PORT}" 
-		sh "echo ${jsonObj.name}" 
-                sh "echo ${jsonObj.age}"  
-		    }	    
+	
 	        echo 'Running build automation'            }
         }
          stage('Build Docker Image') {
