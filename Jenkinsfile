@@ -29,8 +29,8 @@ pipeline {
 		     REPORT_NAME="${jsonObj1.reporting.productName}"
 		echo 'Running build automation'
 		     
-		     sh 'echo ${MOCA_NAME}'
-			sh 'echo ${MCS_NAME}'
+		     echo ${MOCA_NAME}
+		     echo ${MCS_NAME}
 	     }
 		    
 		    echo "${varx}" 
