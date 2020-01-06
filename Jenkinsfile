@@ -8,8 +8,7 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-	  CC ='aa'
-	sh 'echo ${CC}'	    
+		sh 'echo ${CC}'	    
 	        echo 'Running build automation'            }
         }
          stage('Build Docker Image') {
