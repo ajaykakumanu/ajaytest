@@ -18,6 +18,8 @@ pipeline {
 		sh 'echo ${CC}'	    
 		echo 'Running build automation'
 	     }
+		    
+		    echo "${foo}" 
 	    
 	    }
         }
