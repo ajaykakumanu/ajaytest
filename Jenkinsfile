@@ -1,4 +1,4 @@
-def foo = "aaaaaaa"
+def foo = 'aaaaaaa'
 pipeline {
     agent any
 	environment { 
@@ -32,11 +32,11 @@ cat > test.env <<EOF
 NODE_ENV=jenkis
 PORT=1234
                    '''
-			sh '''
-export PATH=$PATH:/opt/compose/
-echo $PATH
-docker-compose up --build
-                   '''
+                      sh '''
+				export PATH=$PATH:/opt/compose/
+				echo $PATH
+				docker-compose up --build
+		       '''
 	
 			
 		}
