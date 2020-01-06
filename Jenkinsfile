@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-	
+	def jsonObj1='aa'
 	        echo 'Running build automation'            }
         }
          stage('Build Docker Image') {
