@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-	  jsonObj='aa'
-	sh 'echo ${jsonObj1}'	    
+	  CC ='aa'
+	sh 'echo ${CC}'	    
 	        echo 'Running build automation'            }
         }
          stage('Build Docker Image') {
