@@ -24,9 +24,9 @@ pipeline {
                 echo "${jsonObj1.mcs.productName}"
 		     MCS_NAME="${jsonObj1.mcs.productName}"
 		echo "${jsonObj1.sal.productName}"
-		     SAL_NAME="${jsonObj1.sal.productName"
+		     SAL_NAME="${jsonObj1.sal.productName}"
 		echo "${jsonObj1.reporting.productName}"
-		     REPORT_NAME="${jsonObj1.reporting.productName"
+		     REPORT_NAME="${jsonObj1.reporting.productName}"
 		echo 'Running build automation'
 	     }
 		    
