@@ -28,7 +28,7 @@ pipeline {
 			sh 'echo $PATH'
 			sh 'echo ${CC}'
 			sh '''
-cat > test1.env <<EOF
+cat > test.env <<EOF
 NODE_ENV=jenkis
 PORT=1234
 EOF
