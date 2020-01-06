@@ -6,12 +6,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-	
-	 def jsonString = '{"name":"katone","age":5}'
-         def jsonObj = readJSON text: jsonString
-       
-         sh "echo ${jsonObj.name}"           sh "echo ${jsonObj.age}"   
-			
+	echo "$env.jsonstring"
 		
             steps {
 		echo "Service_PORT=${Service_PORT}"
