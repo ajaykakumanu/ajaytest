@@ -1,4 +1,4 @@
-def foo = 'aaaaaaa'
+def foo 
 def ajay = "ajay"
 
 
