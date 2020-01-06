@@ -32,8 +32,12 @@ cat > test.env <<EOF
 NODE_ENV=jenkis
 PORT=1234
                    '''
-			
-	sh 'docker-compose up --build'
+			sh '''
+export PATH=$PATH:/opt/compose/
+echo $PATH
+docker-compose up --build
+                   '''
+	
 			
 		}
             }
