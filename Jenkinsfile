@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
 	    steps {
-	  jsonObj1='aa'
+	  jsonObj='aa'
 	sh 'echo ${jsonObj1}'	    
 	        echo 'Running build automation'            }
         }
