@@ -1,5 +1,3 @@
- def varx='aaaaaa' 
-
 def MOCA_NAME
 def MCS_NAME
 def SAL_NAME
