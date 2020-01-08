@@ -30,6 +30,7 @@ pipeline {
 		jsonObj = readJSON text: "${env.jsonstring}"
 		
 		     echo "11111111"	  
+		     echo "${jsontmp}"
 		     
 		     jsontmp1="jsonObj"+${jsontmp}
 		          echo "22222"	  
