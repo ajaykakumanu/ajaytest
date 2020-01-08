@@ -16,7 +16,7 @@ def XB_ARGS_ENV
 def XB_ARGS_WMD
 def XB_ARGS_VOI
 def XB_ARGS_WMTST
-def jsontmp="wmd-testing"
+def jsontmp="wmd_testing"
 def jsonObj
 pipeline {
     agent any
