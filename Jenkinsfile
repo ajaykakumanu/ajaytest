@@ -29,13 +29,7 @@ pipeline {
 	        echo "The Properties string is ${env.jsonstring}"	     
 		jsonObj = readJSON text: "${env.jsonstring}"
 		
-		     echo "11111111"	  
-		     echo "${jsontmp}"
-		     
-		     jsontmp1="jsonObj"+"${jsontmp}"
-		          echo "22222"	  
-		     echo "${jsontmp1}"	  
-		          echo "3333"	  
+		 
 	XB_ARGS_DEVTOOLS="--"+"${jsonObj.devtools.productName}"+"-gitref "+"${jsonObj.devtools.gitBranch}"+"@"+"${jsonObj.devtools.commitHash}"+" "+"--devtools-artifact "+"${jsonObj.devtools.gitBranch}"
 				XB_ARGS_INT="--"+"${jsonObj.int.productName}"+"-artifact"+" "+"${jsonObj.int.moduleName}"
 				XB_ARGS_MCS="--"+"${jsonObj.mcs.productName}"+"-artifact"+" "+"${jsonObj.mcs.moduleName}"
@@ -48,12 +42,9 @@ pipeline {
 				XB_ARGS_ENV="--"+"${jsonObj.env.productName}"+"-artifact"+" "+"${jsonObj.env.moduleName}"
 				XB_ARGS_WMD="--"+"${jsonObj.dcs.productName}"+"-artifact"+" "+"${jsonObj.dcs.moduleName}"
 				XB_ARGS_VOI="--"+"${jsonObj.voice.productName}"+"-artifact"+" "+"${jsonObj.voice.moduleName}"
+		    
 		     
-		     echo "${jsontmp1}"
-		     
-		     echo "-------------------------"
-		     
-		     XB_ARGS_WMTST="--"+"${jsonObj.${jsontmp}.productName}"+"-artifact"+" "+"${jsonObj.${jsontmp}.moduleName}"
+		     XB_ARGS_WMTST="--"+"${jsonObj."${jsontmp}".productName}"+"-artifact"+" "+"${jsonObj.${jsontmp}.moduleName}"
 				sh """
 cat > xb.env <<EOF
 XB_ARGS_DEVTOOLS=${XB_ARGS_DEVTOOLS}
