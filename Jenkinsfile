@@ -31,10 +31,10 @@ pipeline {
 		
 		     echo "11111111"	  
 		     
-		     jsontmp1="jsonObj."+${jsontmp}
-		     
+		     jsontmp1="jsonObj"+${jsontmp}
+		          echo "22222"	  
 		     echo "${jsontmp1}"	  
-		     
+		          echo "3333"	  
 	XB_ARGS_DEVTOOLS="--"+"${jsonObj.devtools.productName}"+"-gitref "+"${jsonObj.devtools.gitBranch}"+"@"+"${jsonObj.devtools.commitHash}"+" "+"--devtools-artifact "+"${jsonObj.devtools.gitBranch}"
 				XB_ARGS_INT="--"+"${jsonObj.int.productName}"+"-artifact"+" "+"${jsonObj.int.moduleName}"
 				XB_ARGS_MCS="--"+"${jsonObj.mcs.productName}"+"-artifact"+" "+"${jsonObj.mcs.moduleName}"
