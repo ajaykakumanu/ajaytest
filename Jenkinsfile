@@ -16,7 +16,7 @@ def XB_ARGS_ENV
 def XB_ARGS_WMD
 def XB_ARGS_VOI
 def XB_ARGS_WMTST
-
+def jsontmp="wmd-testing"
 def jsonObj
 pipeline {
     agent any
@@ -39,7 +39,7 @@ pipeline {
 				XB_ARGS_ENV="--"+"${jsonObj.env.productName}"+"-artifact"+" "+"${jsonObj.env.moduleName}"
 				XB_ARGS_WMD="--"+"${jsonObj.dcs.productName}"+"-artifact"+" "+"${jsonObj.dcs.moduleName}"
 				XB_ARGS_VOI="--"+"${jsonObj.voice.productName}"+"-artifact"+" "+"${jsonObj.voice.moduleName}"
-				XB_ARGS_WMTST="--"+"${jsonObj.wmd_testing.productName}"+"-artifact"+" "+"${jsonObj.wmd_testing.moduleName}"
+		     XB_ARGS_WMTST="--"+"${jsonObj.${jsontmp}.productName}"+"-artifact"+" "+"${jsonObj.${jsontmp}.moduleName}"
 				sh """
 cat > xb.env <<EOF
 XB_ARGS_DEVTOOLS=${XB_ARGS_DEVTOOLS}
