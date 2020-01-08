@@ -17,7 +17,7 @@ def XB_ARGS_WMD
 def XB_ARGS_VOI
 def XB_ARGS_WMTST
 def jsontmp="wmd_testing"
-def jsontmp1="jsonObj."+${jsontmp}
+def jsontmp1
 def jsontmp2
 def jsonObj
 pipeline {
@@ -28,7 +28,13 @@ pipeline {
 	     script {
 	        echo "The Properties string is ${env.jsonstring}"	     
 		jsonObj = readJSON text: "${env.jsonstring}"
-		echo "11111111"	  
+		
+		     echo "11111111"	  
+		     
+		     jsontmp1="jsonObj."+${jsontmp}
+		     
+		     echo "${jsontmp1}"	  
+		     
 	XB_ARGS_DEVTOOLS="--"+"${jsonObj.devtools.productName}"+"-gitref "+"${jsonObj.devtools.gitBranch}"+"@"+"${jsonObj.devtools.commitHash}"+" "+"--devtools-artifact "+"${jsonObj.devtools.gitBranch}"
 				XB_ARGS_INT="--"+"${jsonObj.int.productName}"+"-artifact"+" "+"${jsonObj.int.moduleName}"
 				XB_ARGS_MCS="--"+"${jsonObj.mcs.productName}"+"-artifact"+" "+"${jsonObj.mcs.moduleName}"
