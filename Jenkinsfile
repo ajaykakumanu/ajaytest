@@ -32,15 +32,21 @@ pipeline {
 				XB_ARGS_INT="--"+"${jsonObj.int.productName}"+" "+"${jsonObj.int.moduleName}"
 				XB_ARGS_MCS="--"+"${jsonObj.mcs.productName}"+" "+"${jsonObj.mcs.moduleName}"
 				XB_ARGS_REFS="--"+"${jsonObj.rpweb.productName}"+" "+"${jsonObj.rpweb.moduleName}"
+		     echo "333"
 				XB_ARGS_AX="--"+"${jsonObj.AutomatedExecution.productName}"+" "+"${jsonObj.AutomatedExecution.moduleName}"
 				XB_ARGS_SAL="--"+"${jsonObj.sal.productName}"+" "+"${jsonObj.sal.moduleName}"
 				XB_ARGS_RPT="--"+"${jsonObj.reporting.productName}"+" "+"${jsonObj.reporting.moduleName}"
+		     
+		     echo "444"
 				XB_ARGS_MOCA="--"+"${jsonObj.moca.productName}"+" "+"${jsonObj.moca.moduleName}"
 				XB_ARGS_MTF="--"+"${jsonObj.mtf.productName}"+" "+"${jsonObj.mtf.moduleName}"
 				XB_ARGS_ENV="--"+"${jsonObj.env.productName}"+" "+"${jsonObj.env.moduleName}"
 				XB_ARGS_WMD="--"+"${jsonObj.dcs.productName}"+" "+"${jsonObj.dcs.moduleName}"
+		     echo "5555"
 				XB_ARGS_VOI="--"+"${jsonObj.voice.productName}"+" "+"${jsonObj.voice.moduleName}"
+		     echo "66"
 				XB_ARGS_WMTST="--"+"${jsonObj.wmd-testing.productName}"+" "+"${jsonObj.wmd-testing.moduleName}"
+		     echo "7777"
 				sh """
 cat > xb.env <<EOF
 XB_ARGS_DEVTOOLS=${XB_ARGS_DEVTOOLS}
