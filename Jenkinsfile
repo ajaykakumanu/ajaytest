@@ -45,7 +45,7 @@ pipeline {
 		     echo "5555"
 				XB_ARGS_VOI="--"+"${jsonObj.voice.productName}"+" "+"${jsonObj.voice.moduleName}"
 		     echo "66"
-				XB_ARGS_WMTST="--"+"${jsonObj.wmd-testing.productName}"+" "+"${jsonObj.wmd-testing.moduleName}"
+				XB_ARGS_WMTST="--"+"${jsonObj.wmd_testing.productName}"+" "+"${jsonObj.wmd_testing.moduleName}"
 		     echo "7777"
 				sh """
 cat > xb.env <<EOF
