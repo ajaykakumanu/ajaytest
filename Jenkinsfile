@@ -16,7 +16,7 @@ def XB_ARGS_ENV
 def XB_ARGS_WMD
 def XB_ARGS_VOI
 def XB_ARGS_WMTST
-def jsontmp="wmd_testing"
+def jsontmp="wmd-testing"
 def jsontmp1
 def jsontmp2
 def jsonObj
