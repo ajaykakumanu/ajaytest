@@ -43,9 +43,7 @@ pipeline {
 				XB_ARGS_ENV="--"+"${jsonObj.env.productName}"+"-artifact"+" "+"${jsonObj.env.moduleName}"
 				XB_ARGS_WMD="--"+"${jsonObj.dcs.productName}"+"-artifact"+" "+"${jsonObj.dcs.moduleName}"
 				XB_ARGS_VOI="--"+"${jsonObj.voice.productName}"+"-artifact"+" "+"${jsonObj.voice.moduleName}"
-		    
-		     
-		     XB_ARGS_WMTST="--"+"${jsonObj."${jsontmp}".productName}"+"-artifact"+" "+"${jsonObj.${jsontmp}.moduleName}"
+		    	        XB_ARGS_WMTST="--"+"${jsonObj."wmd-testing".productName}"+"-artifact"+" "+"${jsonObj."wmd-testing".moduleName}"
 				sh """
 cat > xb.env <<EOF
 XB_ARGS_DEVTOOLS=${XB_ARGS_DEVTOOLS}
