@@ -32,7 +32,7 @@ pipeline {
 		     echo "11111111"	  
 		     echo "${jsontmp}"
 		     
-		     jsontmp1="jsonObj"+${jsontmp}
+		     jsontmp1="jsonObj"+"${jsontmp}"
 		          echo "22222"	  
 		     echo "${jsontmp1}"	  
 		          echo "3333"	  
