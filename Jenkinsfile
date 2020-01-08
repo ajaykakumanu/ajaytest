@@ -28,7 +28,7 @@ pipeline {
 	     script {
 	        echo "The Properties string is ${env.jsonstring}"	     
 		jsonObj = readJSON text: "${env.jsonstring}"
-		 jsontmp2="${jsonObj.devtools.productName}"
+		 jsontmp2="${jsonObj."wmd-testing".productName}"
 		     echo "${jsontmp2}"
 		 
 	XB_ARGS_DEVTOOLS="--"+"${jsonObj.devtools.productName}"+"-gitref "+"${jsonObj.devtools.gitBranch}"+"@"+"${jsonObj.devtools.commitHash}"+" "+"--devtools-artifact "+"${jsonObj.devtools.gitBranch}"
