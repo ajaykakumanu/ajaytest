@@ -1,8 +1,8 @@
+@Library('jenkinsci-unstashParam-library')_
 def MOCA_NAME
 def MCS_NAME
 def SAL_NAME
 def REPORT_NAME
-
 def XB_ARGS_DEVTOOLS
 def XB_ARGS_INT
 def XB_ARGS_MCS
@@ -26,10 +26,14 @@ pipeline {
         stage('Build') {
 	    steps {
 	     script {
-	        echo "The Properties string is ${env.jsonstring}"	     
+		     
+		     def file_in_workspace = unstashParam "file"
+                     sh "cat ${file_in_workspace}"
+                  
+		     
 		jsonObj = readJSON text: "${env.jsonstring}"
 		 jsontmp2="${jsonObj."wmd-testing".productName}"
-		     echo "${jsontmp2}"
+		
 		 
 	XB_ARGS_DEVTOOLS="--"+"${jsonObj.devtools.productName}"+"-gitref "+"${jsonObj.devtools.gitBranch}"+"@"+"${jsonObj.devtools.commitHash}"+" "+"--devtools-artifact "+"${jsonObj.devtools.gitBranch}"
 				XB_ARGS_INT="--"+"${jsonObj.int.productName}"+"-artifact"+" "+"${jsonObj.int.moduleName}"
@@ -65,23 +69,8 @@ EOF
          stage('Build Docker Image') {
             steps {
 		echo 'Image starts'
-		    git credentialsId: 'github_key', url: 'https://github.com/ajaykakumanu/ajaytest.git'
-                script {
-			sh """
-cat > test.env <<EOF
-MOCA_NAME=${MOCA_NAME}
-MCS_NAME=${MCS_NAME}
-SAL_NAME=${SAL_NAME}
-REPORT_NAME=${REPORT_NAME}
-EOF
-                   """
-                      sh '''
-				export PATH=$PATH:/opt/compose/
-				echo $PATH
-				
-		       '''
-	 
-		}
+		
+               
             }
         }
        
