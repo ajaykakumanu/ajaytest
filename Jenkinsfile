@@ -27,7 +27,7 @@ pipeline {
 	    steps {
 	     script {
 		     
-		      writeFile file: 'demo.yaml', text: params.DEMO_YAML
+		      writeFile file: 'demo.xml', text: params.DEMO_YAML
 		     
 		     def file_in_workspace = unstashParam "file"
                      sh "cat ${file_in_workspace}"
