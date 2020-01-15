@@ -1,0 +1,7 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+
+# set Unix tools to always use LF
+unix/*.profile.dev text eol=lf
+unix/*.profile     text eol=lf
+unix/*.sh          text eol=lf
+
